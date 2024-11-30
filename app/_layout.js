@@ -3,6 +3,7 @@ import "../global.css";
 import { LogBox } from 'react-native';
 
 export default function Layout() {
+  // Ignore specific warning logs
   LogBox.ignoreLogs(["Warning: Failed prop type"]);
 
   return (
@@ -23,6 +24,13 @@ export default function Layout() {
           presentation: "fullScreenModal",
         }}
       />
+      <Stack.Screen
+        name="SearchScreen"
+        options={{
+          presentation: "fullScreenModal",
+        }}
+      />
     </Stack>
   );
 }
+
